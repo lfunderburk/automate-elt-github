@@ -10,7 +10,7 @@ Data analytics and business intelligence rely heavily on efficient data extracti
 
 By the end of this workshop, participants will know how to:
 
-* Extract, transform, and load data using JupySQL, DuckDB and Amazon Redshift - from Jupyter notebooks.
+* Extract, load, and transform data using JupySQL, DuckDB and Amazon Redshift - from Jupyter notebooks.
 * Automate and schedule ETL processes using GitHub Actions.
 * Use Python and SQL to clean, aggregate, and transform data.
 * Apply these skills to a real-world data management problem.
@@ -21,11 +21,11 @@ Duration: 2.5 hours
 
 * Introductions
 * **Section 1**: Introduction to ELT  (30 minutes)
-* **Section 2**: Data extraction, wrangling and loading with SQL, JupySQL and DuckDB/Amazon Redshift (30 minutes)
+* **Section 2**: Data extraction, wrangling and loading with SQL and DuckDB (30 minutes)
 * *Short Break* (15 minutes)
 * **Section 3**: Introduction to GitHub actions (30 minutes)
 * **Section 4**: CI/CD of ETL Processes with GitHub Actions (15 minutes)
-* **Section 5**: Regularly fetch and populate a data with ELT and GitHub actions (15 minutes)
+* **Section 5**: Regularly fetch and populate a db with ELT and GitHub actions (15 minutes)
 
 ### Setup Instructions
 
