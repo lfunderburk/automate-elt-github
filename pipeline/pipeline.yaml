@@ -1,0 +1,8 @@
+tasks:
+  - source: etl/extractdata.py
+    product:
+      nb: products/extract-pipeline.ipynb
+  - source: etl/wrangle-data.ipynb
+    product:
+      nb: products/wrangle-data-pipeline.ipynb
+ 

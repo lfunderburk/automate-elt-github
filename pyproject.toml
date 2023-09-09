@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "automate-etl-github-actions"
+version = "0.1.0"
+description = "workshop material for etl with github actions"
+authors = ["Laura Gutierrez Funderburk <lgutierrwr@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupysql = "^0.10.0"
+jupysql-plugin = "^0.2.1"
+duckdb-engine = "=0.9.1"
+pandas="2.0.3"
+ploomber = "^0.23.0"
+seaborn = "^0.12.2"
+matplotlib = "^3.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.jupysql.SqlMagic]
+displaycon = false
+feedback = true
+autopandas  = true
+named_parameters = true
