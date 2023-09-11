@@ -29,10 +29,11 @@ Duration: 2.5 hours
 
 ### Setup Instructions
 
-1. Clone repository: 
+0. Fork repository
+1. Clone your fork of the repository: 
 
 ```
-git clone https://github.com/Vancouver-Datajam/automate-etl-github-actions.git
+git clone https://github.com/<your-github-id>/automate-etl-github-actions.git
 cd automate-etl-github-actions
 ```
 
