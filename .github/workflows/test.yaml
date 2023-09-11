@@ -26,6 +26,7 @@ jobs:
         pip install poetry 
         poetry lock
         poetry install --no-root
-    - name: Test with pytest
+     - name: Set PYTHONPATH and Test with pytest
       run: |
+        export PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE/automate-elt-github/
         poetry run pytest
