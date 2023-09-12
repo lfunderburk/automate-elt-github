@@ -2,7 +2,7 @@
 
 Ensure you have followed the setup steps in the [README](../README.md) before proceeding.
 
-Once you have done that, you can execute the pipeline as:
+Once you have done that, you can execute the pipeline from the `pipeline` folder as:
 
 ```bash
 poetry run ploomber build
