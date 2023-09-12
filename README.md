@@ -2,6 +2,8 @@
 
 ## Automating ETL Processes with JupySQL and GitHub Actions
 
+[Slides here](pipeline/etl/automating-etl-github.ipynb)
+
 ### Introduction
 
 Data analytics and business intelligence rely heavily on efficient data extraction, transformation, and loading (ETL) processes. This workshop will provide participants with a comprehensive understanding of ETL and JupySQL - a Python library that enables seamless SQL based ETL from Jupyter notebooks. We will also introduce GitHub actions for scheduling and automating ETL processes. By the end of this workshop, participants will have hands-on experience with these tools and will be able to schedule their own ETL jobs.
