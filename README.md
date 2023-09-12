@@ -42,7 +42,7 @@ cd automate-etl-github-actions
 ```
 conda create -n automate-etl python=3.10
 conda activate automate-etl
-pip install poetry==1.5.1
+pip install poetry==1.5.1 redshift-connector "sqlalchemy<2"
 poetry install
 ```
 

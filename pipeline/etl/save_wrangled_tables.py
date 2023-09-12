@@ -8,12 +8,26 @@ import duckdb
 import pandas as pd 
 
 # +
-def save_result(query, file_name, columns):
+def save_result(conn, query, file_name, table_name, columns ):
     result = conn.execute(query).fetchall()
-    with open(file_name, 'w') as file:
-        file.write(','.join(columns) + '\n')
-        for row in result:
-            file.write(','.join(map(str, row)) + '\n')
+    df = pd.DataFrame(result, columns=columns)
+    
+    # Remove ? from the data
+    df = df.replace('?', float('NaN'))
+    
+    # Explicitly cast columns based on table_name
+    if table_name == 'account_trans_order':
+        int_columns = ['account_id', 'account_creation_date', 'trans_id', 'transaction_amount', 'balance', 'order_id', 'account_to', 'order_amount','transaction_date']
+        for col in int_columns:
+            df[col] = df[col].astype('int32')
+    
+    elif table_name == 'client_account_district':
+        int_columns = ['client_id', 'birth_number', 'account_id', 'account_creation_date', 'no_of_entrepreneurs_per_1000_inhabitants']
+        for col in int_columns:
+            df[col] = df[col].astype('int32')
+    
+    # Save to parquet
+    df.to_parquet(file_name, index=False)
 
 
 # -
@@ -23,7 +37,7 @@ if __name__ == "__main__":
     conn = duckdb.connect(database='bank_data.duck.db', read_only=True)
 
     query_a = "SELECT * FROM account_trans_order"
-    save_result(query_a, "etl/expanded_data/account_trans_order.csv",['account_id',
+    save_result(conn, query_a, "etl/expanded_data/account_trans_order.parquet", "account_trans_order", ['account_id',
                                                                     'frequency',
                                                                     'account_creation_date',
                                                                     'trans_id',
@@ -38,7 +52,7 @@ if __name__ == "__main__":
                                                                     'order_amount'] )
 
     query_a = "SELECT * FROM client_account_district"
-    save_result(query_a, "etl/expanded_data/client_account_district.csv",['client_id',
+    save_result(conn, query_a, "etl/expanded_data/client_account_district.parquet", "client_account_district", ['client_id',
                                                                         'birth_number',
                                                                         'account_id',
                                                                         'frequency',
@@ -51,21 +65,6 @@ if __name__ == "__main__":
                                                                         'unemployment_rate_96',
                                                                         'no_of_entrepreneurs_per_1000_inhabitants'] )
 
-     # Read the data from the CSV file
-    cad = pd.read_csv('etl/expanded_data/client_account_district.csv')
-    
-    # Remove ? from thedata
-    cad = cad.replace('?', float('NaN'))
-
-    # Save to csv 
-    cad.to_csv('etl/expanded_data/client_account_district.csv', index=False)
-
-    ato = pd.read_csv('etl/expanded_data/account_trans_order.csv')
-    # Remove ? from thedata
-    ato = ato.replace('?', float('NaN'))
-
-    # Save to csv 
-    ato.to_csv('etl/expanded_data/account_trans_order.csv', index=False)
 
 
 

@@ -10,4 +10,7 @@ tasks:
     static_analysis: disable
     product:
       nb: products/save_wrangled_tables-pipeline.ipynb
+  - source: etl/redshift-data-population.ipynb
+    product:
+      nb: products/redshift-data-population-pipeline.ipynb
  
