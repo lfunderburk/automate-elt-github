@@ -1,20 +1,13 @@
-# Scripts directory
+# Executing pipeline
 
-Use this script to store any R, Bash or Python scripts you developed. This includes:
+Ensure you have followed the setup steps in the [README](../README.md) before proceeding.
 
-1. Apps
-2. Data donwload and clean up scripts
-3. Data visualization scripts
-4. Machine learning pipelines
+Once you have done that, you can execute the pipeline as:
 
-## Required sections
+```bash
+poetry run ploomber build
+```
 
-### Set up
+To add more components to the pipeline, edit the `pipeline.yaml` file and run the above command again.
 
-Tell what we need to install for the scripts to run successfully (i.e. libraries)
-
-### Command line parameters (if applicable) or code snippets demonstrating code usage
-
-    python my_python_script.py parameter1
-    
-### Script considerations and limitations
+You can easily Dockerize this pipeline by adding a `Dockerfile` and a `docker-compose.yaml` file. See the [Docker guide with JupySQL and Ploomber](https://ploomber-sql.readthedocs.io/en/latest/packaging-your-sql-project/etl-eda-pipeline-with-ploomber.html) for more details.
