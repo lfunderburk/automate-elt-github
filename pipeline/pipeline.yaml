@@ -1,16 +1,5 @@
 tasks:
-  - source: etl/extractdata.py
+  - source: 
     product:
-      nb: products/extract-pipeline.ipynb
-  - source: etl/wrangle-data.ipynb
-    static_analysis: disable
-    product:
-      nb: products/wrangle-data-pipeline.ipynb
-  - source: etl/save_wrangled_tables.py
-    static_analysis: disable
-    product:
-      nb: products/save_wrangled_tables-pipeline.ipynb
-  - source: etl/redshift-data-population.ipynb
-    product:
-      nb: products/redshift-data-population-pipeline.ipynb
- 
+      nb: 
+  
