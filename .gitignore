@@ -201,3 +201,4 @@ products/*
 *.csv
 pipeline/products/extract-pipeline.ipynb
 pipeline/products/wrangle-data-pipeline.ipynb
+pipeline/products/save_wrangled_tables-pipeline.ipynb
