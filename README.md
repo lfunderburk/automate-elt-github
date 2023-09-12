@@ -25,7 +25,7 @@ Duration: 2.5 hours
 * *Short Break* (15 minutes)
 * **Section 3**: Introduction to GitHub actions (30 minutes)
 * **Section 4**: CI/CD of ETL Processes with GitHub Actions (15 minutes)
-* **Section 5**: Regularly fetch and populate a db with ELT and GitHub actions (15 minutes)
+* **Section 5**: Deploying your ETL/ELT pipeline to Amazon Redshift  (15 minutes)
 
 ### Setup Instructions
 
@@ -42,7 +42,7 @@ cd automate-etl-github-actions
 ```
 conda create -n automate-etl python=3.10
 conda activate automate-etl
-pip install poetry
+pip install poetry==1.5.1
 poetry install
 ```
 

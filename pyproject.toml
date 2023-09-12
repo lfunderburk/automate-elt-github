@@ -16,6 +16,8 @@ ploomber = "^0.23.0"
 seaborn = "^0.12.2"
 matplotlib = "^3.7.2"
 pytest = "^7.4.2"
+python-dotenv = "^1.0.0"
+sqlalchemy-redshift = "^0.8.14"
 
 
 [build-system]
