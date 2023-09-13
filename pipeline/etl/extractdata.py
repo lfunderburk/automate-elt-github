@@ -5,6 +5,7 @@ upstream = None
 # -
 
 import csv
+import requests
 import urllib.request
 import zipfile
 import os
@@ -25,9 +26,15 @@ class MarketData:
             url (str): the URL containing the public data
         """
         try:
-            # Download the ZIP file
+            response = requests.get(self.url, stream=True)
             zip_file_path, _ = urllib.request.urlretrieve(self.url)
-            # Extract the ZIP file
+
+
+            with open(zip_file_path, 'wb') as out_file:
+                for chunk in response.iter_content(chunk_size=8192):
+                    out_file.write(chunk)
+
+            # Now, try to extract the ZIP file
             with zipfile.ZipFile(zip_file_path, "r") as zip_ref:
                 zip_ref.extractall(self.output_folder)
 
