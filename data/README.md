@@ -1,7 +1,15 @@
 # Data directory
 
-It is preferable that you list your data sources in this readme. **Do not store other organization's data in this repository unless you made significant changes to it and you are comfortable with others accessing it.**
+This project extracts and transforms data fromthe following source:
 
-Data sources selected for the event are public. Check the licenses of these data sources to ensure you give proper attribution and indicate what changes you made. 
+```{important}
+Source: UCI Machine Learning Repository
 
-You can also use this directory to document how you processed the data. 
+URL: https://archive-beta.ics.uci.edu/dataset/222/bank+marketing
+
+Topic: The data is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).
+
+Data Citation
+
+Moro,S., Rita,P., and Cortez,P.. (2012). Bank Marketing. UCI Machine Learning Repository. https://doi.org/10.24432/C5K306.
+```
