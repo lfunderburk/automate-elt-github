@@ -98,5 +98,5 @@ if __name__ == "__main__":
             "no_of_committed_crimes_95",
             "no_of_committed_crimes_96",
         ]
-    _ = MarketData("https://tinyurl.com/jb-bank-m", data_dir)
+    _ = MarketData("https://archive.ics.uci.edu/dataset/222/bank+marketing", data_dir)
     _.convert_asc_to_csv(district_column_names)
