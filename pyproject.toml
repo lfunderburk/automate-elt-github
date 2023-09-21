@@ -20,6 +20,8 @@ python-dotenv = "^1.0.0"
 sqlalchemy-redshift = "^0.8.14"
 update = "^0.0.1"
 pyarrow = "^13.0.0"
+jupyter = "^1.0.0"
+ipykernel = "^6.25.2"
 
 
 [build-system]
